@@ -32,6 +32,7 @@ const buscarPersonagem = () => {
       v-on:keyup="buscarPersonagem"
       v-model="search"
       placeholder="luke, Darth, Lars"
+      name="search" id="search"
     />
     <button class="button" @click="buscarPersonagem">BUSCAR</button>
   </div>
