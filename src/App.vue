@@ -17,12 +17,19 @@ export default {
 </template>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik");
 
 @font-face {
   font-family: "Starjedi";
-  src: local("Starjedi"), url("./assets/Starjedi.ttf"), format("truetype");
-  font-weight: bold;
+  src: url("./assets/fonts/StarJedi.eot");
+  src: url("./assets/fonts/StarJedi.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/StarJedi.woff2") format("woff2"),
+    url("./assets/fonts/StarJedi.woff") format("woff"),
+    url("./assets/fonts/StarJedi.ttf") format("truetype"),
+    url("./assets/fonts/StarJedi.svg#StarJedi") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -31,6 +38,7 @@ export default {
   padding: 0;
   box-sizing: border-box;
   background-color: #fffef7;
+  user-select: none;
 }
 
 .container {

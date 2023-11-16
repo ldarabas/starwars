@@ -5,7 +5,7 @@ import { RouterLink } from "vue-router";
 <template>
   <header>
     <nav class="container">
-      <div class="logo">
+      <div class="logo" v-on:click="$router.push('/')">
         <img src="../assets/star-wars-logo.png" alt="" />
         <h1>Star Wars List</h1>
       </div>
@@ -31,14 +31,17 @@ header {
       display: flex;
       align-items: center;
       gap: 20px;
-
+      cursor: pointer;
       img {
         max-width: 64px;
       }
 
       h1 {
-        font-size: 26px;
+        font-size: 28px;
         font-family: "Starjedi", sans-serif;
+        @media (max-width: 600px) {
+          font-size: 20px;
+        }
       }
     }
 
@@ -53,6 +56,10 @@ header {
         text-decoration: none;
         font-family: "Starjedi", sans-serif;
         color: inherit;
+        font-size: 16px;
+        @media (max-width: 600px) {
+          font-size: 14px;
+        }
       }
     }
   }
